@@ -11,20 +11,14 @@ export const Introduccion = () => {
             probable que hayas escuchado hablar de los "macros" o macronutrientes. Los
             macronutrientes son los nutrientes que nuestro cuerpo necesita en grandes
             cantidades para funcionar correctamente: proteínas, carbohidratos y grasas.
-            Cada uno de estos macronutrientes tiene una función específica en nuestro
-            cuerpo y es importante asegurarnos de consumirlos en las proporciones
-            adecuadas para satisfacer nuestras necesidades nutricionales y alcanzar
-            nuestros objetivos, ya sea para bajar de peso, aumentar masa muscular o
-            simplemente mantenernos saludables. Si te gustaría conocer más sobre los
-            macros y cómo calcular la cantidad de proteínas, carbohidratos y grasas que tu
-            cuerpo necesita diariamente, te invito a probar mi calculadora de macros en mi
-            sitio web. Con esta herramienta, podrás ingresar tu información personal, como
-            edad, peso y nivel de actividad física, y obtener una estimación de la
-            cantidad de calorías y macros que debes consumir para alcanzar tus objetivos.
-            ¡No esperes más para mejorar tu alimentación y llevar un estilo de vida más
-            saludable! Visita mi sitio web y prueba mi calculadora de macros hoy mismo.
           </p>
-          <div className="flex mt-6 md:mt-4">
+          <br />
+          <p>
+            Si te gustaría conocer más sobre los macros y cómo calcular la cantidad de
+            proteínas, carbohidratos y grasas que tu cuerpo necesita diariamente, te
+            invito a probar mi calculadora de macros.
+          </p>
+          {/* <div className="flex mt-6 md:mt-4">
             <button className="inline-flex px-4 py-1 text-white bg-green-500 border-0 rounded focus:outline-none hover:bg-green-600">
               Button
             </button>
@@ -42,7 +36,7 @@ export const Introduccion = () => {
                 <path d="M5 12h14M12 5l7 7-7 7"></path>
               </svg>
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

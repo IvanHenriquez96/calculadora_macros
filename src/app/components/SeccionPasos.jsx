@@ -11,7 +11,7 @@ export const SeccionPasos = () => {
                 <div className="w-1 h-full bg-gray-200 pointer-events-none"></div>
               </div>
               <div className="relative z-10 inline-flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-green-500 rounded-full">
-                1
+                <p className="font-bold">1</p>
               </div>
               <div className="flex-grow pl-4">
                 <h2 className="mb-1 text-sm font-medium tracking-wider text-gray-900 title-font">
@@ -22,21 +22,6 @@ export const SeccionPasos = () => {
                   en reposo y realizar funciones vitales como respirar, hacer latir tu
                   corazón, etc.
                 </p>
-                <p className="mb-2">
-                  Una fórmula comúnmente utilizada para calcular la TMB es la fórmula de
-                  Harris-Benedict. Esta fórmula tiene en cuenta tu edad, peso, altura y
-                  sexo.
-                </p>
-
-                <p className="mb-2">
-                  Aquí tienes la fórmula para hombres: TMB = (10 x peso en kg) + (6,25 x
-                  altura en cm) - (5 x edad en años) + 5
-                </p>
-
-                <p className="mb-2">
-                  Y aquí la fórmula para mujeres: TMB = (10 x peso en kg) + (6,25 x altura
-                  en cm) - (5 x edad en años) - 161
-                </p>
               </div>
             </div>
             <div className="relative flex pb-12">
@@ -44,24 +29,16 @@ export const SeccionPasos = () => {
                 <div className="w-1 h-full bg-gray-200 pointer-events-none"></div>
               </div>
               <div className="relative z-10 inline-flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-green-500 rounded-full">
-                2
+                <p className="font-bold">2</p>
               </div>
               <div className="flex-grow pl-4">
                 <h2 className="mb-1 text-sm font-medium tracking-wider text-gray-900 title-font">
                   Determina tu nivel de actividad física:
                 </h2>
                 <p className="leading-relaxed">
-                  El nivel de actividad física se refiere a la cantidad de ejercicio que
-                  realizas durante el día. Si eres sedentario, es decir, tienes un estilo
-                  de vida bastante inactivo, debes multiplicar tu TMB por 1.2. Si eres
-                  ligeramente activo, es decir, haces ejercicio ligero de 1 a 3 veces por
-                  semana, debes multiplicar tu TMB por 1.375. Si eres moderadamente
-                  activo, es decir, haces ejercicio moderado de 3 a 5 veces por semana,
-                  debes multiplicar tu TMB por 1.55. Si eres muy activo, es decir, haces
-                  ejercicio intenso de 6 a 7 veces por semana, debes multiplicar tu TMB
-                  por 1.725. Si eres extremadamente activo, es decir, haces ejercicio
-                  intenso y trabajas físicamente todos los días, debes multiplicar tu TMB
-                  por 1.9.
+                  La cantidad de ejercicio que realizas durante el día. Si eres
+                  sedentario, ligeramente activo, moderadamente activo o extremadamente
+                  activo.
                 </p>
               </div>
             </div>
@@ -70,19 +47,24 @@ export const SeccionPasos = () => {
                 <div className="w-1 h-full bg-gray-200 pointer-events-none"></div>
               </div>
               <div className="relative z-10 inline-flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-green-500 rounded-full">
-                3
+                <p className="font-bold">3</p>
               </div>
               <div className="flex-grow pl-4">
                 <h2 className="mb-1 text-sm font-medium tracking-wider text-gray-900 title-font">
                   Establece tus objetivos
                 </h2>
                 <p className="leading-relaxed">
-                  Dependiendo de tus objetivos, necesitarás ajustar tus macros. Si tu
-                  objetivo es perder peso, deberás crear un déficit calórico, lo que
+                  Dependiendo de tus objetivos, necesitarás ajustar tus macros.
+                </p>
+                <p>
+                  Si tu objetivo es perder peso, deberás crear un déficit calórico, lo que
                   significa que deberás consumir menos calorías de las que tu cuerpo
-                  necesita para bajar de peso. Si tu objetivo es ganar masa muscular,
-                  deberás consumir un superávit calórico, es decir, deberás consumir más
-                  calorías de las que tu cuerpo necesita para construir músculo.
+                  necesita para bajar de peso.
+                </p>
+                <p>
+                  Si tu objetivo es ganar masa muscular, deberás consumir un superávit
+                  calórico, es decir, deberás consumir más calorías de las que tu cuerpo
+                  necesita para construir músculo.
                 </p>
               </div>
             </div>
@@ -91,7 +73,7 @@ export const SeccionPasos = () => {
                 <div className="w-1 h-full bg-gray-200 pointer-events-none"></div>
               </div>
               <div className="relative z-10 inline-flex items-center justify-center flex-shrink-0 w-10 h-10 text-white bg-green-500 rounded-full">
-                4
+                <p className="font-bold">4</p>
               </div>
               <div className="flex-grow pl-4">
                 <h2 className="mb-1 text-sm font-medium tracking-wider text-gray-900 title-font">
@@ -124,7 +106,7 @@ export const SeccionPasos = () => {
                 <h2 className="mb-1 text-sm font-medium tracking-wider text-gray-900 title-font">
                   ATENCIÓN
                 </h2>
-                <p className="leading-relaxed">
+                <p className="font-semibold leading-relaxed">
                   Recuerda que estos cálculos son solo una guía y que debes ajustarlos
                   según tus necesidades individuales y objetivos específicos. También es
                   importante recordar que la calidad de los alimentos que consumes es tan
@@ -134,7 +116,7 @@ export const SeccionPasos = () => {
             </div>
           </div>
 
-          <div className="object-cover object-center w-11/12 mx-auto mt-12 border rounded-lg lg:w-3/5 md:w-1/2 md:mt-0">
+          <div className="object-cover object-center mx-auto mt-12 border rounded-lg w-12/12 lg:w-3/5 md:w-1/2 md:mt-0">
             <CalculadoraTMB />
           </div>
         </div>
