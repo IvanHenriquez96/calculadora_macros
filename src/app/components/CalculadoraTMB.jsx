@@ -6,12 +6,14 @@ import { Resultado } from "./Resultado";
 export const CalculadoraTMB = () => {
   const [sexo, setSexo] = useState("Hombre");
   const [actividadFisica, setActividadFisica] = useState(1);
+  const [objetivo, setObjetivo] = useState(1);
   const [formulario, setFormulario] = useState({
     sexo: "Hombre",
     altura: "",
     peso: "",
     edad: "",
     actividadFisica: 1,
+    objetivo: 1,
   });
   const [isError, setIsError] = useState(false);
   const [resultado, setResultado] = useState(null);
@@ -25,6 +27,7 @@ export const CalculadoraTMB = () => {
 
   const seleccionarSexo = (e) => {
     setSexo(e.target.value);
+    setResultado(null);
     const name = e.target.name;
     const value = e.target.value;
     const aux = { ...formulario, [name]: value };
@@ -33,6 +36,15 @@ export const CalculadoraTMB = () => {
 
   const seleccionarActividadFisica = (e) => {
     setActividadFisica(e.target.value);
+    setResultado(null);
+    const name = e.target.name;
+    const value = e.target.value;
+    const aux = { ...formulario, [name]: value };
+    setFormulario(aux);
+  };
+  const seleccionarObjetivo = (e) => {
+    setObjetivo(e.target.value);
+    setResultado(null);
     const name = e.target.name;
     const value = e.target.value;
     const aux = { ...formulario, [name]: value };
@@ -74,11 +86,38 @@ export const CalculadoraTMB = () => {
       res = tmb * 1.9;
     }
 
-    setResultado(Math.round(res));
+    if (objetivo == "1") {
+      res = res - 200;
+    }
+    if (objetivo == "3") {
+      res = res + 200;
+    }
+
+    const calorias = res; // EJ: 2000
+    const carbos = Math.round(calorias * 0.4); // 800 calorías de carbohidratos
+    const proteinas = Math.round(calorias * 0.3); // 600 calorías de proteínas
+    const grasas = Math.round(calorias * 0.3); // 600 calorías de grasas
+
+    const gramosCarbos = Math.round(carbos / 4); // 200 gramos de carbohidratos
+    const gramosProteinas = Math.round(proteinas / 4); // 150 gramos de proteínas
+    const gramosGrasas = Math.round(grasas / 9); // 67 gramos de grasas
+
+    const response = {
+      calorias,
+      carbos,
+      proteinas,
+      grasas,
+      gramosCarbos,
+      gramosProteinas,
+      gramosGrasas,
+    };
+    console.log(response);
+
+    setResultado(response);
   };
 
   return (
-    <div className="border rounded-lg ">
+    <div id="calculadora_tmb" className="border rounded-lg ">
       <h4 className="mt-4 mb-2 text-xl font-bold text-center md:text-2xl">
         Calculadora de TMB
       </h4>
@@ -198,6 +237,40 @@ export const CalculadoraTMB = () => {
 
         <br />
 
+        <p className="col-span-2 mb-2 font-semibold">Selecciona tu objetivo:</p>
+        <button
+          name="objetivo"
+          value={1}
+          onClick={seleccionarObjetivo}
+          className={`col-span-2 p-1 mb-2 border rounded-lg ${
+            objetivo == 1 && "bg-green-500 text-white font-bold"
+          }`}
+        >
+          Perder Peso
+        </button>
+        <button
+          name="objetivo"
+          value={2}
+          onClick={seleccionarObjetivo}
+          className={`col-span-2 p-1 mb-2 border rounded-lg ${
+            objetivo == 2 && "bg-green-500 text-white font-bold"
+          }`}
+        >
+          Mantener Peso
+        </button>
+        <button
+          name="objetivo"
+          value={3}
+          onClick={seleccionarObjetivo}
+          className={`col-span-2 p-1 mb-2 border rounded-lg ${
+            objetivo == 3 && "bg-green-500 text-white font-bold"
+          }`}
+        >
+          Ganar Peso
+        </button>
+
+        <br />
+
         {isError && (
           <div className="col-span-2 p-2 mb-3 bg-red-100 border border-red-500 rounded-lg">
             <p className="text-center text-red-500">
@@ -212,7 +285,7 @@ export const CalculadoraTMB = () => {
           Calcular Resultado
         </button>
 
-        {resultado && <Resultado resultado={resultado} />}
+        {resultado && <Resultado resultado={resultado} objetivo={formulario.objetivo} />}
       </div>
     </div>
   );

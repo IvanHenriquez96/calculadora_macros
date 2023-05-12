@@ -13,7 +13,7 @@ const Hero = () => {
           </p>
           <div className="flex justify-center">
             <button className="inline-flex px-6 py-2 text-lg text-white bg-green-500 border-0 rounded focus:outline-none hover:bg-green-600">
-              Ir a la Calculadora
+              <a href="#calculadora_tmb"> Ir a la Calculadora</a>
             </button>
             {/* <button className="inline-flex px-6 py-2 ml-4 text-lg text-gray-700 bg-gray-100 border-0 rounded focus:outline-none hover:bg-gray-200">
               Button
