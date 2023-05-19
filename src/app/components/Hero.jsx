@@ -2,8 +2,8 @@ const Hero = () => {
   return (
     <section className="text-gray-600 body-font">
       <div className="container flex flex-col items-center px-5 py-24 mx-auto md:flex-row">
-        <div className="flex flex-col items-center mb-16 text-center lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0">
-          <h1 className="mb-4 text-3xl font-semibold text-gray-900 title-font sm:text-4xl">
+        <div className="flex flex-col items-center mb-16 text-center lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0 animate-fade-right animate-once animate-normal">
+          <h1 className="mb-4 text-3xl font-semibold text-gray-900 title-font sm:text-4xl ">
             Alcanza tus objetivos de salud y bienestar con nuestra calculadora de macros
             personalizada.
           </h1>
@@ -20,7 +20,7 @@ const Hero = () => {
             </button> */}
           </div>
         </div>
-        <div className="w-5/6 lg:max-w-lg lg:w-full md:w-1/2">
+        <div className="w-5/6 lg:max-w-lg lg:w-full md:w-1/2 animate-fade-left animate-once animate-normal">
           {/* <img
             className="object-cover object-center rounded"
             alt="hero"

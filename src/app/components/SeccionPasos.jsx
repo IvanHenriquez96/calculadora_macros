@@ -5,7 +5,7 @@ export const SeccionPasos = () => {
     <section className="text-gray-600 body-font">
       <div className="container flex flex-wrap px-5 py-24 mx-auto">
         <div className="flex flex-wrap w-full">
-          <div className="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
+          <div className="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6 animate-fade-down animate-once animate-normal">
             <div className="relative flex pb-12">
               <div className="absolute inset-0 flex items-center justify-center w-10 h-full">
                 <div className="w-1 h-full bg-gray-200 pointer-events-none"></div>

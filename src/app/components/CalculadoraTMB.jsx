@@ -117,7 +117,10 @@ export const CalculadoraTMB = () => {
   };
 
   return (
-    <div id="calculadora_tmb" className="border rounded-lg ">
+    <div
+      id="calculadora_tmb"
+      className="border rounded-lg animate-fade animate-once animate-normal"
+    >
       <h4 className="mt-4 mb-2 text-xl font-bold text-center md:text-2xl">
         Calculadora de TMB
       </h4>
